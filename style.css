@@ -1,0 +1,313 @@
+:root {
+    --limegreen: hsl(163, 72%, 41%);
+    --brightred: hsl(356, 69%, 56%);
+    --darkbg: hsl(230, 17%, 14%);
+    --darktopbg: hsl(232, 19%, 15%);
+    --darkcardbg: hsl(228, 28%, 20%);
+    --darktext: hsl(228, 34%, 66%);
+    --lighttopbg: hsl(225, 100%, 98%);
+    --lightcardbg: hsl(227, 47%, 96%);
+    --lighttext: hsl(228, 12%, 44%);
+    --lighttext2: hsl(230, 17%, 14%);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.body-dark {
+    background-color: var(--darkbg);
+}
+
+.container {
+    margin: 0px 15px;
+}
+
+.social-headings {
+    margin: 30px 0px 20px 0px;
+}
+
+.header {
+    margin: 0px;
+}
+
+.header-alt {
+    color: var(--lighttext);
+}
+
+.header-dark {
+    color: white;
+}
+
+.follower-count {
+    font-weight: 700;
+    color: var(--lighttext2);
+}
+
+.follower-count-dark {
+    color: var(--darktext);
+}
+
+.darkmode-tab {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  width: 40px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 18px;
+  left: 5px;
+  position: absolute;
+  transition: .4s;
+  width: 18px;
+}
+
+.slider:active{
+    outline: 0;
+
+}
+
+input:checked + .slider {
+  background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+  background-color: hsl(230, 17%, 14%);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dmode-text {
+    color: var(--lighttext2);
+    font-weight: 700;
+}
+
+.dmode-text-dark {
+    color: var(--darktext);
+}
+
+.card {
+    background-color: var(--lightcardbg);
+    padding: 40px;
+    margin: 20px 0px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    min-width: 150px;
+}
+
+.card-dark {
+    background-color: var(--darkcardbg);
+}
+
+.facebook {
+    border-top: hsl(208, 92%, 53%) 5px solid;
+}
+
+.twitter {
+    border-top: hsl(203, 89%, 53%) 5px solid;
+}
+
+.instagram::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%)); 
+}
+
+.youtube {
+    border-top: hsl(348, 97%, 39%) 5px solid;
+}
+
+.user-div {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.username {
+    margin: 0px 10px;
+    font-weight: 700;
+    color: var(--lighttext);
+}
+
+.username-dark {
+    color: var(--darktext);
+}
+
+.follow-count {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0px;
+    margin-top: 20px;
+    color: var(--lighttext2);
+}
+
+.follow-count-dark{
+    color: white;
+}
+
+.follower-tag {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0px 0px 20px 0px;
+}
+
+.follower-tag-dark {
+    color: var(--darktext);
+}
+
+.follower-balance {
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.growing {
+    color: var(--limegreen);
+}
+
+.decreasing {
+    color: var(--brightred)
+}
+
+.follower-balance>img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 5px 0px 0px;
+}
+
+.oview-card {
+    padding: 15px 20px;
+}
+
+.oview-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.oview-category {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.oview-category-dark {
+    color: var(--darktext);
+}
+
+.value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--lighttext2);
+}
+
+.value-dark {
+    color: white;
+}
+
+.growth {
+    font-weight: 700;
+}
+
+.growth>img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 3px 0px 0px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 20px;
+    }
+
+    .darkmode-tab {
+        align-items: center;
+    }
+
+    .theme-switch-wrapper {
+        height: 25px;
+        margin-left: 5px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .follower-cards {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 0px;
+        margin: 10px 20px;
+        min-width: ;
+    }
+
+    .overview-container {
+        margin: 30px 20px 0px 20px;
+    }
+
+    .oview-cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .oview-card {
+        height: 100px;
+        width: 25%;
+        flex: 1 1 19%;
+        margin: 20px 20px;
+    }
+}
